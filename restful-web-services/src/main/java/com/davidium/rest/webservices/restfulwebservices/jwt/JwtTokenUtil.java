@@ -16,7 +16,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.DefaultClock;
 
-//@Component
+@Component
 public class JwtTokenUtil implements Serializable {
 
   static final String CLAIM_KEY_USERNAME = "sub";

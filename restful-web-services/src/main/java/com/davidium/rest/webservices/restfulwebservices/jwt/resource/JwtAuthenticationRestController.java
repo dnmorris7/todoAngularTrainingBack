@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.davidium.rest.webservices.restfulwebservices.jwt.JwtTokenUtil;
 import com.davidium.rest.webservices.restfulwebservices.jwt.JwtUserDetails;
 
-//@RestController
-//@CrossOrigin(origins="http://localhost:4200")
+@RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class JwtAuthenticationRestController {
 
   @Value("${jwt.http.request.header}")

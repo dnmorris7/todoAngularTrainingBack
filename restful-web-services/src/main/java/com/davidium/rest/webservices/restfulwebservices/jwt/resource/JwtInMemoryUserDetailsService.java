@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.davidium.rest.webservices.restfulwebservices.jwt.JwtUserDetails;
 
 
-//@Service
+@Service
 public class JwtInMemoryUserDetailsService implements UserDetailsService {
 
   static List<JwtUserDetails> inMemoryUserList = new ArrayList<>();
