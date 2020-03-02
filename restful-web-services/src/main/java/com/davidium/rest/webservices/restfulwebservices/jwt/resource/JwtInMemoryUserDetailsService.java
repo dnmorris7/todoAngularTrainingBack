@@ -19,9 +19,9 @@ public class JwtInMemoryUserDetailsService implements UserDetailsService {
 
   static {
     inMemoryUserList.add(new JwtUserDetails(1L, "davidiumprime",
-        "$2a$10$3zHzb.Npv1hfZbLEU5qsdOju/tk2je6W6PnNnY.c1ujWPcZh4PL6e", "ROLE_USER_2"));
-    inMemoryUserList.add(new JwtUserDetails(1L, "Atma",
-    		"$2a$10$nkztaHmQ6zXIbtTM4qEizOyrnwpMidfJ99CLDkLtFD/v.gQHP9ix6", "ROLE_USER_2"));
+        "$2a$10$ZYjCLL8AYk4JLuFXnFR0v..35pLV01EMRONNolajrQ1CqlU4a3/AS", "ROLE_USER_2"));
+    inMemoryUserList.add(new JwtUserDetails(1L, "atma",
+   		"$2a$10$nkztaHmQ6zXIbtTM4qEizOyrnwpMidfJ99CLDkLtFD/v.gQHP9ix6", "ROLE_USER_2"));
   }
 
   @Override
@@ -32,7 +32,7 @@ public class JwtInMemoryUserDetailsService implements UserDetailsService {
     if (!findFirst.isPresent()) {
       throw new UsernameNotFoundException(String.format("USER_NOT_FOUND '%s'.", username));
     }
-
+System.out.println(String.format("USER_IS_FOUND '%s'.", username));
     return findFirst.get();
   }
 

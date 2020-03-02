@@ -73,6 +73,7 @@ public class JwtAuthenticationRestController {
     return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
   }
 
+  
   private void authenticate(String username, String password) {
     Objects.requireNonNull(username);
     Objects.requireNonNull(password);

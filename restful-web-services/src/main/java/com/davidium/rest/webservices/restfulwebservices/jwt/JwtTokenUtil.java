@@ -56,9 +56,12 @@ public class JwtTokenUtil implements Serializable {
     return expiration.before(clock.now());
   }
 
+  /*@author: David Morris
+   * Setting as true for now for testing purposes
+   */
   private Boolean ignoreTokenExpiration(String token) {
     // here you specify tokens, for that the expiration is ignored
-    return false;
+    return true;
   }
 
   public String generateToken(UserDetails userDetails) {

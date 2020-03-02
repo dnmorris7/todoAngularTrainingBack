@@ -3,8 +3,16 @@ package com.davidium.rest.webservices.restfulwebservices.todo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Todo {
-private long id;
+
+@Id
+@GeneratedValue
+private Long id;
 private Date date;
 private String description;
 private String username;
@@ -15,7 +23,7 @@ protected Todo() {
 	
 }
 
-public Todo(long id, String username,  String description, Date date, boolean completion) {
+public Todo(Long id, String username,  String description, Date date, boolean completion) {
 	super();
 	this.id = id;
 	this.date = date;
@@ -25,10 +33,10 @@ public Todo(long id, String username,  String description, Date date, boolean co
 }
 
 
-public long getId() {
+public Long getId() {
 	return id;
 }
-public void setId(long id) {
+public void setId(Long id) {
 	this.id = id;
 }
 
